@@ -1,0 +1,13 @@
+@mixin n-exactly($n) {
+  &:first-child:nth-last-child(#{$n}),
+  &:first-child:nth-last-child(#{$n}) ~ * {
+    @content;
+  }
+}
+
+@mixin n-or-more($n) {
+  &:first-child:nth-last-child(n + #{$n}),
+  &:first-child:nth-last-child(n + #{$n}) ~ * {
+    @content;
+  }
+}

@@ -1,0 +1,40 @@
+$line-height: 1.5;
+$measure: 85ch;
+$type-scale: 1.5;
+$space-scale: 2;
+
+:root {
+  --line-height: #{$line-height};
+  --measure: #{$measure};
+
+  --type-scale: #{$type-scale};
+
+  --font-size-xxs: calc(var(--font-size-xs) / var(--type-scale));
+  --font-size-xs: calc(var(--font-size-sm) / var(--type-scale));
+  --font-size-sm: calc(var(--font-size-md) / var(--type-scale));
+  --font-size-md: 1rem;
+  --font-size-lg: calc(var(--font-size-md) * var(--type-scale));
+  --font-size-xl: calc(var(--font-size-lg) * var(--type-scale));
+  --font-size-xxl: calc(var(--font-size-xl) * var(--type-scale));
+
+  --space-scale: #{$space-scale};
+
+  --space-xxs: calc(var(--space-xs) / var(--space-scale));
+  --space-xs: calc(var(--space-sm) / var(--space-scale));
+  --space-sm: calc(var(--space-md) / var(--space-scale));
+  --space-md: calc(var(--line-height) * 1rem);
+  --space-lg: calc(var(--space-md) * var(--space-scale));
+  --space-xl: calc(var(--space-lg) * var(--space-scale));
+  --space-xxl: calc(var(--space-xl) * var(--space-scale));
+
+  --gap-default: var(--space-md);
+  --gap: var(--gap-default);
+  --gap-block: var(--gap);
+  --gap-block-default: var(--gap-default);
+  --gap-inline: var(--gap);
+  --gap-inline-default: var(--gap-default);
+
+  --border-width-sm: 0.0625rem;
+  --border-width-md: 0.125rem;
+  --border-width-lg: 0.25rem;
+}

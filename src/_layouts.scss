@@ -1,0 +1,217 @@
+.l-box {
+  --color-light: none;
+  --color-dark: currentColor;
+  --gutter: var(--space-md);
+
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border: var(--border-width-md) solid var(--color-dark);
+  padding: var(--gutter);
+  outline: var(--border-width-md) solid transparent;
+}
+
+.l-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  grid-gap: 0;
+}
+
+.l-stack--split {
+  > :nth-last-child(2) {
+    margin-bottom: auto;
+  }
+}
+
+.l-stack--split-start {
+  > :first-child {
+    margin-bottom: auto;
+  }
+}
+
+.l-stack--tight {
+  --gap-block: 0.5em;
+  --gap-block-self: var(--gap-block-default);
+}
+
+.l-switcher {
+  --breakpoint-base: var(--measure);
+  --breakpoint-scale: 1.5;
+
+  --breakpoint-1: 0rem;
+  --breakpoint-2: var(--breakpoint-base);
+  --breakpoint-3: calc(var(--breakpoint-2) * var(--breakpoint-scale));
+  --breakpoint-4: calc(var(--breakpoint-3) * var(--breakpoint-scale));
+  --breakpoint-5: calc(var(--breakpoint-4) * var(--breakpoint-scale));
+  --breakpoint-6: calc(var(--breakpoint-5) * var(--breakpoint-scale));
+  --breakpoint-7-or-more: 200%;
+
+  --breakpoint: var(--breakpoint-1);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  grid-gap: 0;
+  margin-inline-start: calc(-1 * var(--gap-inline-self));
+  margin-block-end: calc(-1 * var(--gap-block-self));
+
+  > * {
+    flex: 1 1 calc((var(--breakpoint) - 100%) * 9999);
+    margin: 0;
+    margin-inline-start: var(--gap-inline-self);
+    margin-block-end: var(--gap-block-self);
+
+    @include n-exactly(2) {
+      --breakpoint: var(--breakpoint-2);
+    }
+
+    @include n-exactly(3) {
+      --breakpoint: var(--breakpoint-3);
+    }
+
+    @include n-exactly(4) {
+      --breakpoint: var(--breakpoint-4);
+    }
+
+    @include n-exactly(5) {
+      --breakpoint: var(--breakpoint-5);
+    }
+
+    @include n-exactly(6) {
+      --breakpoint: var(--breakpoint-6);
+    }
+
+    @include n-or-more(7) {
+      --breakpoint: var(--breakpoint-7-or-more);
+    }
+  }
+}
+
+.l-switcher--with-sidebar > * {
+  flex: 9999 1 0;
+  min-width: calc(50% - var(--gap-inline-self));
+}
+
+.l-switcher__sidebar {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.l-grid {
+  --cell-min-size: 10rem;
+  --cell-min-size-fallback: calc(10% + 6.5rem);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--cell-min-size-fallback), 1fr));
+
+  @supports (width: min(1rem, 2rem)) {
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--cell-min-size), 100%), 1fr));
+  }
+
+  list-style: none;
+  padding: 0;
+
+  > * {
+    @supports (display: grid) {
+      margin: 0;
+    }
+  }
+}
+
+.l-center {
+  --max-size: var(--measure);
+
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin: auto;
+    max-inline-size: var(--max-size);
+  }
+}
+
+.l-cover {
+  --gutter: var(--space-md);
+  --min-block-size: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  grid-gap: 0;
+  justify-content: space-between;
+  min-block-size: var(--min-block-size);
+  padding: var(--gutter);
+
+  > :first-child:not(.l-cover__main) {
+    margin: 0;
+    margin-block-end: var(--gap-block-self);
+  }
+
+  > :last-child:not(.l-cover__main) {
+    margin: 0;
+    margin-block-start: var(--gap-block-self);
+  }
+}
+
+.l-cover__main {
+  margin-block: auto;
+}
+
+.l-frame {
+  padding-bottom: calc(100% / (var(--aspect-ratio, 1/1)));
+
+  position: relative;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.l-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  grid-gap: 0;
+  margin-inline-start: calc(-1 * var(--gap-inline-self));
+  margin-block-end: calc(-1 * var(--gap-block-self));
+
+  > * {
+    flex: 0 0 auto;
+    margin: 0;
+    margin-inline-start: var(--gap-inline-self);
+    margin-block-end: var(--gap-block-self);
+  }
+}
+
+.l-cluster--end {
+  justify-content: flex-end;
+}
+
+.l-cluster--center {
+  justify-content: center;
+}
+
+.l-carousel {
+  --gap-block: 0;
+
+  display: flex;
+  grid-gap: 0;
+  list-style: none;
+  max-inline-size: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  > * {
+    flex: 0 0 auto;
+
+    + * {
+      margin-left: var(--gap-inline-self, var(--gap-inline));
+    }
+  }
+}

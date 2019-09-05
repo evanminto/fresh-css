@@ -1,0 +1,19 @@
+{
+  "name": "fresh-css",
+  "version": "0.0.1",
+  "description": "CSS starter kit with some useful patterns for new projects",
+  "main": "index.js",
+  "repository": "git@github.com:evanminto/fresh-css.git",
+  "author": "Evan Minto <evan.minto@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/fresh.scss --out-dir dist",
+    "watch": "parcel watch src/fresh.scss --out-dir dist",
+    "start": "yarn run watch",
+    "start:demos": "parcel serve src/demos/kitchen-sink.html --out-dir demos"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.23.0-module.beta.1"
+  }
+}
