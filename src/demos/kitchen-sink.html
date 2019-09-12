@@ -23,390 +23,380 @@
   }
 
   .demo-frame {
-    border: 0.125rem solid;
     min-block-size: 50vh;
+  }
+
+  .demo-page {
+    padding: var(--space-md);
   }
 </style>
 
-<h1>Fresh.css Kitchen Sink</h1>
+<div class="demo-page">
+  <h1>Fresh.css Kitchen Sink</h1>
 
-<h2>Paragraph</h2>
+  <h2>Paragraph</h2>
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-  ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
-  Etiam scelerisque semper justo, nec dignissim metus luctus sed.
-</p>
-
-<h2>Layout: Box</h2>
-
-<div class="l-box">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
     ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
     Etiam scelerisque semper justo, nec dignissim metus luctus sed.
   </p>
-</div>
 
-<h2>Layout: Stack</h2>
+  <h2>Layout: Box</h2>
 
-<h3>Default</h3>
+  <h3>Default</h3>
 
-<div class="l-stack">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-</div>
-
-<h3>Split</h3>
-
-<div class="l-stack l-stack--split demo-frame">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-</div>
-
-<h3>Split (Start)</h3>
-
-<div class="l-stack l-stack--split-start demo-frame">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-</div>
-
-<h2>Layout: Switcher</h2>
-
-<h3>One Item</h3>
-
-<div class="l-switcher">
-  <div class="demo-block">1</div>
-</div>
-
-<h3>Two Items</h3>
-
-<div class="l-switcher">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-</div>
-
-<h3>Three Items</h3>
-
-<div class="l-switcher">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-</div>
-
-<h3>Four Items</h3>
-
-<div class="l-switcher">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-</div>
-
-<h3>Five Items</h3>
-
-<div class="l-switcher">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-</div>
-
-<h3>Six Items</h3>
-
-<div class="l-switcher">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-  <div class="demo-block">6</div>
-</div>
-
-<h3>Seven Items</h3>
-
-<div class="l-switcher">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-  <div class="demo-block">6</div>
-  <div class="demo-block">7</div>
-</div>
-
-<h3>With Sidebar</h3>
-
-<div class="l-switcher l-switcher--with-sidebar">
-  <div class="demo-block">Main</div>
-  <div class="demo-block l-switcher__sidebar">Sidebar</div>
-</div>
-
-<h3>With Sidebar (Sidebar on Left)</h3>
-
-<div class="l-switcher l-switcher--with-sidebar">
-  <div class="demo-block l-switcher__sidebar">Sidebar</div>
-  <div class="demo-block">Main</div>
-</div>
-
-<h2>Layout: Grid</h2>
-
-<div class="l-grid">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-  <div class="demo-block">6</div>
-  <div class="demo-block">7</div>
-  <div class="demo-block">8</div>
-  <div class="demo-block">9</div>
-  <div class="demo-block">10</div>
-  <div class="demo-block">11</div>
-  <div class="demo-block">12</div>
-  <div class="demo-block">13</div>
-  <div class="demo-block">14</div>
-  <div class="demo-block">15</div>
-  <div class="demo-block">16</div>
-  <div class="demo-block">17</div>
-  <div class="demo-block">18</div>
-  <div class="demo-block">19</div>
-  <div class="demo-block">20</div>
-</div>
-
-<h2>Layout: Cluster</h2>
-
-<h3>Default (Start)</h3>
-
-<div class="l-cluster">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-  <div class="demo-block">6</div>
-  <div class="demo-block">7</div>
-  <div class="demo-block">8</div>
-  <div class="demo-block">9</div>
-  <div class="demo-block">10</div>
-  <div class="demo-block">11</div>
-  <div class="demo-block">12</div>
-  <div class="demo-block">13</div>
-  <div class="demo-block">14</div>
-  <div class="demo-block">15</div>
-  <div class="demo-block">16</div>
-  <div class="demo-block">17</div>
-  <div class="demo-block">18</div>
-  <div class="demo-block">19</div>
-  <div class="demo-block">20</div>
-</div>
-
-<h3>End</h3>
-
-<div class="l-cluster l-cluster--end">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-  <div class="demo-block">6</div>
-  <div class="demo-block">7</div>
-  <div class="demo-block">8</div>
-  <div class="demo-block">9</div>
-  <div class="demo-block">10</div>
-  <div class="demo-block">11</div>
-  <div class="demo-block">12</div>
-  <div class="demo-block">13</div>
-  <div class="demo-block">14</div>
-  <div class="demo-block">15</div>
-  <div class="demo-block">16</div>
-  <div class="demo-block">17</div>
-  <div class="demo-block">18</div>
-  <div class="demo-block">19</div>
-  <div class="demo-block">20</div>
-</div>
-
-<h3>Center</h3>
-
-<div class="l-cluster l-cluster--center">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-  <div class="demo-block">6</div>
-  <div class="demo-block">7</div>
-  <div class="demo-block">8</div>
-  <div class="demo-block">9</div>
-  <div class="demo-block">10</div>
-  <div class="demo-block">11</div>
-  <div class="demo-block">12</div>
-  <div class="demo-block">13</div>
-  <div class="demo-block">14</div>
-  <div class="demo-block">15</div>
-  <div class="demo-block">16</div>
-  <div class="demo-block">17</div>
-  <div class="demo-block">18</div>
-  <div class="demo-block">19</div>
-  <div class="demo-block">20</div>
-</div>
-
-<h2>Layout: Carousel</h2>
-
-<div class="l-carousel">
-  <div class="demo-block">1</div>
-  <div class="demo-block">2</div>
-  <div class="demo-block">3</div>
-  <div class="demo-block">4</div>
-  <div class="demo-block">5</div>
-  <div class="demo-block">6</div>
-  <div class="demo-block">7</div>
-  <div class="demo-block">8</div>
-  <div class="demo-block">9</div>
-  <div class="demo-block">10</div>
-  <div class="demo-block">11</div>
-  <div class="demo-block">12</div>
-  <div class="demo-block">13</div>
-  <div class="demo-block">14</div>
-  <div class="demo-block">15</div>
-  <div class="demo-block">16</div>
-  <div class="demo-block">17</div>
-  <div class="demo-block">18</div>
-  <div class="demo-block">19</div>
-  <div class="demo-block">20</div>
-</div>
-
-<h2>Layout: Center</h2>
-
-<div class="l-center demo-frame">
-  <div class="demo-block">
+  <div class="l-box">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
       Etiam scelerisque semper justo, nec dignissim metus luctus sed.
     </p>
   </div>
-</div>
 
-<h2>Layout: Cover</h2>
+  <h3>With Border</h3>
 
-<h3>Main Only</h3>
-
-<div class="l-cover">
-  <div class="demo-block l-cover__main">
-    <p>
-      Main
-    </p>
-  </div>
-</div>
-
-<h3>Header and Main</h3>
-
-<div class="l-cover">
-  <div class="demo-block">
-    <p>
-      Header
-    </p>
-  </div>
-
-  <div class="demo-block l-cover__main">
-    <p>
-      Main
-    </p>
-  </div>
-</div>
-
-<h3>Main and Footer</h3>
-
-<div class="l-cover">
-  <div class="demo-block l-cover__main">
-    <p>
-      Main
-    </p>
-  </div>
-
-  <div class="demo-block">
-    <p>
-      Footer
-    </p>
-  </div>
-</div>
-
-<h3>All Three</h3>
-
-<div class="l-cover">
-  <div class="demo-block">
-    <p>
-      Header
-    </p>
-  </div>
-
-  <div class="demo-block l-cover__main">
-    <p>
-      Main
-    </p>
-  </div>
-
-  <div class="demo-block">
-    <p>
-      Footer
-    </p>
-  </div>
-</div>
-
-<h2>Layout: Frame</h2>
-
-<div class="l-frame">
-  <div class="demo-block">
+  <div class="l-box l-box--with-border">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
       Etiam scelerisque semper justo, nec dignissim metus luctus sed.
     </p>
   </div>
-</div>
 
-<h2>Putting Them Together</h2>
+  <h3>With Nested Stretch</h3>
 
-<div class="l-cover" style="background: lightgray;">
-  <div class="l-cover__main">
-    <div class="l-switcher l-switcher--with-sidebar">
-      <div>
-        <div class="l-switcher l-switcher--with-sidebar">
-          <div class="l-switcher__sidebar l-center">
-            <div>
-              <div class="l-frame" style="min-inline-size: 5rem; border-radius: 10rem; overflow: hidden;">
-                <div class="demo-block"></div>
-              </div>
-            </div>
-          </div>
+  <div class="l-box l-box--with-border">
+    <p>
+      Before
+    </p>
 
-          <div>
-            <h3>Welcome to My Site</h3>
+    <div class="l-box l-box--stretch" style="background: black; color: white;">Middle</div>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
-              Etiam scelerisque semper justo, nec dignissim metus luctus sed.
-            </p>
-          </div>
-        </div>
-      </div>
+    <p>
+      After
+    </p>
+  </div>
 
-      <div class="l-switcher__sidebar">
-        <form class="l-box l-stack" style="--color-light: white;">
-          <label class="l-stack">
-            Email
-            <input>
-          </label>
+  <h2>Layout: Stack</h2>
 
-          <button>Sign Up</button>
-        </form>
-      </div>
+  <h3>Default</h3>
+
+  <div class="l-stack">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+  </div>
+
+  <h3>Split</h3>
+
+  <div class="l-stack l-stack--split demo-frame">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+  </div>
+
+  <h3>Split (Start)</h3>
+
+  <div class="l-stack l-stack--split-start demo-frame">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+  </div>
+
+  <h2>Layout: Switcher</h2>
+
+  <h3>One Item</h3>
+
+  <div class="l-switcher">
+    <div class="demo-block">1</div>
+  </div>
+
+  <h3>Two Items</h3>
+
+  <div class="l-switcher">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+  </div>
+
+  <h3>Three Items</h3>
+
+  <div class="l-switcher">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+  </div>
+
+  <h3>Four Items</h3>
+
+  <div class="l-switcher">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+  </div>
+
+  <h3>Five Items</h3>
+
+  <div class="l-switcher">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+  </div>
+
+  <h3>Six Items</h3>
+
+  <div class="l-switcher">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+    <div class="demo-block">6</div>
+  </div>
+
+  <h3>Seven Items</h3>
+
+  <div class="l-switcher">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+    <div class="demo-block">6</div>
+    <div class="demo-block">7</div>
+  </div>
+
+  <h3>With Sidebar</h3>
+
+  <div class="l-switcher l-switcher--with-sidebar">
+    <div class="demo-block">Main</div>
+    <div class="demo-block l-switcher__sidebar">Sidebar</div>
+  </div>
+
+  <h3>With Sidebar (Sidebar on Left)</h3>
+
+  <div class="l-switcher l-switcher--with-sidebar">
+    <div class="demo-block l-switcher__sidebar">Sidebar</div>
+    <div class="demo-block">Main</div>
+  </div>
+
+  <h2>Layout: Grid</h2>
+
+  <div class="l-grid">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+    <div class="demo-block">6</div>
+    <div class="demo-block">7</div>
+    <div class="demo-block">8</div>
+    <div class="demo-block">9</div>
+    <div class="demo-block">10</div>
+    <div class="demo-block">11</div>
+    <div class="demo-block">12</div>
+    <div class="demo-block">13</div>
+    <div class="demo-block">14</div>
+    <div class="demo-block">15</div>
+    <div class="demo-block">16</div>
+    <div class="demo-block">17</div>
+    <div class="demo-block">18</div>
+    <div class="demo-block">19</div>
+    <div class="demo-block">20</div>
+  </div>
+
+  <h2>Layout: Cluster</h2>
+
+  <h3>Default (Start)</h3>
+
+  <div class="l-cluster">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+    <div class="demo-block">6</div>
+    <div class="demo-block">7</div>
+    <div class="demo-block">8</div>
+    <div class="demo-block">9</div>
+    <div class="demo-block">10</div>
+    <div class="demo-block">11</div>
+    <div class="demo-block">12</div>
+    <div class="demo-block">13</div>
+    <div class="demo-block">14</div>
+    <div class="demo-block">15</div>
+    <div class="demo-block">16</div>
+    <div class="demo-block">17</div>
+    <div class="demo-block">18</div>
+    <div class="demo-block">19</div>
+    <div class="demo-block">20</div>
+  </div>
+
+  <h3>End</h3>
+
+  <div class="l-cluster l-cluster--end">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+    <div class="demo-block">6</div>
+    <div class="demo-block">7</div>
+    <div class="demo-block">8</div>
+    <div class="demo-block">9</div>
+    <div class="demo-block">10</div>
+    <div class="demo-block">11</div>
+    <div class="demo-block">12</div>
+    <div class="demo-block">13</div>
+    <div class="demo-block">14</div>
+    <div class="demo-block">15</div>
+    <div class="demo-block">16</div>
+    <div class="demo-block">17</div>
+    <div class="demo-block">18</div>
+    <div class="demo-block">19</div>
+    <div class="demo-block">20</div>
+  </div>
+
+  <h3>Center</h3>
+
+  <div class="l-cluster l-cluster--center">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+    <div class="demo-block">6</div>
+    <div class="demo-block">7</div>
+    <div class="demo-block">8</div>
+    <div class="demo-block">9</div>
+    <div class="demo-block">10</div>
+    <div class="demo-block">11</div>
+    <div class="demo-block">12</div>
+    <div class="demo-block">13</div>
+    <div class="demo-block">14</div>
+    <div class="demo-block">15</div>
+    <div class="demo-block">16</div>
+    <div class="demo-block">17</div>
+    <div class="demo-block">18</div>
+    <div class="demo-block">19</div>
+    <div class="demo-block">20</div>
+  </div>
+
+  <h2>Layout: Carousel</h2>
+
+  <div class="l-carousel">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+    <div class="demo-block">4</div>
+    <div class="demo-block">5</div>
+    <div class="demo-block">6</div>
+    <div class="demo-block">7</div>
+    <div class="demo-block">8</div>
+    <div class="demo-block">9</div>
+    <div class="demo-block">10</div>
+    <div class="demo-block">11</div>
+    <div class="demo-block">12</div>
+    <div class="demo-block">13</div>
+    <div class="demo-block">14</div>
+    <div class="demo-block">15</div>
+    <div class="demo-block">16</div>
+    <div class="demo-block">17</div>
+    <div class="demo-block">18</div>
+    <div class="demo-block">19</div>
+    <div class="demo-block">20</div>
+  </div>
+
+  <h2>Layout: Center</h2>
+
+  <div class="l-center">
+    <div class="demo-block">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
+        Etiam scelerisque semper justo, nec dignissim metus luctus sed.
+      </p>
+    </div>
+  </div>
+
+  <h2>Layout: Cover</h2>
+
+  <h3>Main Only</h3>
+
+  <div class="l-cover">
+    <div class="demo-block l-cover__main">
+      <p>
+        Main
+      </p>
+    </div>
+  </div>
+
+  <h3>Header and Main</h3>
+
+  <div class="l-cover">
+    <div class="demo-block">
+      <p>
+        Header
+      </p>
+    </div>
+
+    <div class="demo-block l-cover__main">
+      <p>
+        Main
+      </p>
+    </div>
+  </div>
+
+  <h3>Main and Footer</h3>
+
+  <div class="l-cover">
+    <div class="demo-block l-cover__main">
+      <p>
+        Main
+      </p>
+    </div>
+
+    <div class="demo-block">
+      <p>
+        Footer
+      </p>
+    </div>
+  </div>
+
+  <h3>All Three</h3>
+
+  <div class="l-cover">
+    <div class="demo-block">
+      <p>
+        Header
+      </p>
+    </div>
+
+    <div class="demo-block l-cover__main">
+      <p>
+        Main
+      </p>
+    </div>
+
+    <div class="demo-block">
+      <p>
+        Footer
+      </p>
+    </div>
+  </div>
+
+  <h2>Layout: Frame</h2>
+
+  <div class="l-frame">
+    <div class="demo-block">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
+        Etiam scelerisque semper justo, nec dignissim metus luctus sed.
+      </p>
     </div>
   </div>
 </div>

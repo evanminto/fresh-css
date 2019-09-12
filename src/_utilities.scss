@@ -1,0 +1,17 @@
+.u-clear-list-style {
+  list-style: none !important;
+  max-width: none !important;
+  padding: 0 !important;
+
+  > * {
+    max-width: none !important;
+  }
+}
+
+.u-center {
+  text-align: center !important;
+}
+
+.u-reorder-first {
+  order: -1 !important;
+}

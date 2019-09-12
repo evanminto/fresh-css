@@ -1,8 +1,23 @@
+html,
+body {
+  block-size: 100%;
+  margin: 0;
+}
+
 body {
   line-height: var(--line-height);
+
+  // Stop horizontal scrolling when using a mouse since viewport units don't
+  // take scrollbars into account.
+  @media (any-pointer: fine) {
+    @supports (width: 100vw) {
+      overflow-inline: hidden;
+    }
+  }
 }
 
 img {
+  max-width: 100%;
   object-fit: cover;
   object-position: center center;
 }
@@ -19,6 +34,6 @@ aside {
 }
 
 :focus {
-  box-shadow: 0 0 0 0.0625rem white, 0 0 0 0.1875rem black, var(--box-shadow);
+  box-shadow: 0 0 0 var(--border-width-lg) black, var(--box-shadow, 0 0 0 transparent);
   outline: none;
 }

@@ -1,0 +1,389 @@
+<!doctype html>
+
+<link rel="stylesheet" href="../fresh.scss">
+
+<style>
+  body > .l-center {
+    --max-size: calc(var(--measure) * 1.5);
+  }
+
+  .hero {
+    --min-size: 66.667vh;
+    background: #eee;
+  }
+
+  .titled-section {
+    --gap-block-self: var(--space-lg);
+    --gap-block: var(--space-sm);
+  }
+
+  .item-preview {
+    background: #eee;
+  }
+
+  .item-preview > .l-box {
+    --gutter: 0;
+  }
+
+  .item-preview .l-switcher {
+    --sidebar-size: 15rem;
+    --gap-block: 0rem;
+    --gap-inline: 0rem;
+  }
+
+  .item-preview .l-frame {
+    --aspect-ratio: 16/9;
+  }
+
+  .small-item .l-frame {
+    --aspect-ratio: 8.5/11;
+  }
+</style>
+
+<body>
+  <div class="l-center">
+    <div class="l-stack l-stack--compact l-stack--split">
+      <header class="l-box">
+        <div class="l-switcher l-switcher--with-sidebar">
+          <div>
+            <a href="">My Website</a>
+          </div>
+
+          <nav class="l-switcher__sidebar">
+            <ul class="l-cluster u-clear-list-style">
+              <li>
+                <a href="">One</a>
+              </li>
+
+              <li>
+                <a href="">Two</a>
+              </li>
+
+              <li>
+                <a href="">Three</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <header class="l-cover l-cover--breakout hero">
+          <div class="l-center l-cover__main u-center">
+            <div>
+              <h1>Welcome to My Website!</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="l-box">
+          <ul class="l-switcher u-clear-list-style u-center">
+            <li class="l-box l-box--with-border">
+              <div class="l-center">
+                <div>
+                  <h2>One</h2>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="l-box l-box--with-border">
+              <div class="l-center">
+                <div>
+                  <h2>Two</h2>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="l-box l-box--with-border">
+              <div class="l-center">
+                <div>
+                  <h2>Three</h2>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="titled-section">
+            <div class="l-cluster l-cluster--spread">
+              <h2>Items</h2>
+              <a href="">Show All</a>
+            </div>
+
+            <div>
+              <ul class="l-carousel u-clear-list-style">
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>One</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Two</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Three</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Four</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Five</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Six</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Seven</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Eight</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Nine</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Ten</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Eleven</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Twelve</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Thirteen</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Fourteen</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="small-item">
+                    <div class="l-stack">
+                      <h3>Fifteen</h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+
+                      <div class="l-frame u-reorder-first">
+                        <img src="//placehold.it/200x300">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="titled-section">
+            <div class="l-cluster l-cluster--spread">
+              <h2>More Items</h2>
+              <a href="">Show All</a>
+            </div>
+
+            <ul class="l-switcher u-clear-list-style">
+              <li>
+                <div class="item-preview">
+                  <div class="l-box">
+                    <div class="l-switcher l-switcher--with-sidebar">
+                      <div class="l-box">
+                        <h2>One</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+
+                      <div class="l-switcher__sidebar u-reorder-first">
+                        <div class="l-frame">
+                          <img src="//placehold.it/500x500">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="item-preview">
+                  <div class="l-box">
+                    <div class="l-switcher l-switcher--with-sidebar">
+                      <div class="l-box">
+                        <h2>Two</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+
+                      <div class="l-switcher__sidebar u-reorder-first">
+                        <div class="l-frame">
+                          <img src="//placehold.it/500x500">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="item-preview">
+                  <div class="l-box">
+                    <div class="l-switcher l-switcher--with-sidebar">
+                      <div class="l-box">
+                        <h2>Three</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+
+                      <div class="l-switcher__sidebar u-reorder-first">
+                        <div class="l-frame">
+                          <img src="//placehold.it/500x500">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <footer class="l-box u-center">
+        © 2019 Evan Minto
+      </footer>
+    </div>
+  </div>
+</body>

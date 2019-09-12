@@ -10,7 +10,7 @@
     "build": "parcel build src/fresh.scss --out-dir dist",
     "watch": "parcel watch src/fresh.scss --out-dir dist",
     "start": "yarn run watch",
-    "start:demos": "parcel serve src/demos/kitchen-sink.html --out-dir demos"
+    "start:demos": "parcel serve src/demos/**/*.html --out-dir demos"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
