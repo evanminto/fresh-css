@@ -42,7 +42,8 @@
   }
 }
 
-.l-switcher {
+.l-switcher,
+.l-sidebar {
   --breakpoint-base: var(--measure);
   --breakpoint-scale: 1.25;
 
@@ -97,14 +98,25 @@
   }
 }
 
-.l-switcher--with-sidebar > * {
-  flex: 9999 1 0;
-  min-width: calc(50% - var(--gap-inline-self));
+.l-sidebar {
+  --min-size: 50%;
+
+  > * {
+    flex: 1 1 var(--target-size, var(--child-target-size));
+
+    @include n-exactly(1) {
+      --breakpoint: 100%;
+    }
+
+    @include n-exactly(2) {
+      --breakpoint: 100%;
+    }
+  }
 }
 
-.l-switcher__sidebar {
-  flex: 1 1 var(--child-target-size);
-  min-width: 0;
+.l-sidebar__main {
+  flex: 9999 1 calc((var(--breakpoint) - 100%) * 9999);
+  min-width: calc(var(--min-size) - var(--gap-inline-self));
 }
 
 .l-grid {

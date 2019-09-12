@@ -91,63 +91,63 @@ Consistent padding along the edges of an element.
 ### --breakpoint-base
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 For elements with multiple responsive breakpoints, this is the starting point for calculating the breakpoints.
 
 ### --breakpoint-scale
 **Unit:** `<number>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 For elements with multiple responsive breakpoints, this is the value used for calculating the modular scale.
 
 ### --breakpoint-1
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 The breakpoint when the element has one child. Computed using a modular scale by default, but can be manually overriden.
 
 ### --breakpoint-2
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 The breakpoint when the element has two children. Computed using a modular scale by default, but can be manually overriden.
 
 ### --breakpoint-3
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 The breakpoint when the element has three children. Computed using a modular scale by default, but can be manually overriden.
 
 ### --breakpoint-4
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 The breakpoint when the element has four children. Computed using a modular scale by default, but can be manually overriden.
 
 ### --breakpoint-5
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 The breakpoint when the element has five children. Computed using a modular scale by default, but can be manually overriden.
 
 ### --breakpoint-6
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 The breakpoint when the element has six children. Computed using a modular scale by default, but can be manually overriden.
 
 ### --breakpoint-7-or-more
 **Unit:** `<length>`
 
-**Supported in:** Switcher
+**Supported in:** Sidebar, Switcher
 
 The breakpoint when the element has seven or more children. Computed using a modular scale by default, but can be manually overriden.
 
@@ -161,9 +161,9 @@ The maximum size of an element along its primary axis (as determined by the layo
 ### --min-size
 **Unit:** `<length>`
 
-**Supported in:** Cover
+**Supported in:** Cover, Sidebar
 
-The minimum size of an element along its primary axis (as determined by the layout or component).
+The minimum size of an element along its primary axis (as determined by the layout or component). For Cover this refers to the height of the entire layout, while for Sidebar it refers to the main content item.
 
 ### --aspect-ratio
 **Unit:** `<number>/<number>`
@@ -185,3 +185,10 @@ The size that child elements will start at before layout calculation via Flexbox
 **Supported in:** Grid
 
 A fallback value for `--child-target-size` in cases where the layout or component uses an experimental method of setting the size (such as the `min()` function in Grid).
+
+### --target-size
+**Unit:** `<length>`
+
+**Supported in:** Sidebar
+
+Same as `--child-target-size`, but for the purpose of overriding the parent value for specific children.
