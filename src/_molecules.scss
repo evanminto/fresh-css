@@ -1,0 +1,48 @@
+.m-responsive-table {
+  &,
+  tbody,
+  tr,
+  td,
+  th {
+    display: block;
+  }
+
+  thead,
+  tfoot {
+    display: none;
+  }
+
+  td::before {
+    content: attr(data-header) ': ';
+    font-weight: bold;
+  }
+
+  @media (min-width: 35.5em) {
+    display: table;
+
+    thead {
+      display: table-header-group;
+    }
+
+    tbody {
+      display: table-row-group;
+    }
+
+    tfoot {
+      display: table-footer-group;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    td,
+    th {
+      display: table-cell;
+    }
+
+    td::before {
+      content: none;
+    }
+  }
+}

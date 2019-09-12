@@ -1,15 +1,13 @@
 .l-box {
-  --border-width: 0;
   --gutter: var(--space-md);
-  --gutter-self: var(--gutter);
 
   border: var(--border-width) solid currentColor;
-  padding: var(--gutter-self);
+  padding: var(--gutter);
   outline: var(--border-width-md) solid transparent;
 }
 
 .l-box--with-border {
-  --border-width: var(--border-width-md);
+  border: var(--border-width) solid currentColor;
 }
 
 .l-box--stretch {
@@ -58,7 +56,7 @@
 
   --breakpoint: var(--breakpoint-1);
 
-  --sidebar-size: auto;
+  --child-target-size: auto;
 
   display: flex;
   flex-wrap: wrap;
@@ -105,19 +103,19 @@
 }
 
 .l-switcher__sidebar {
-  flex: 1 1 var(--sidebar-size);
+  flex: 1 1 var(--child-target-size);
   min-width: 0;
 }
 
 .l-grid {
-  --cell-min-size: 10rem;
-  --cell-min-size-fallback: calc(10% + 6.5rem);
+  --child-target-size: 10rem;
+  --child-target-size-fallback: calc(10% + 6.5rem);
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--cell-min-size-fallback), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--child-target-size-fallback), 1fr));
 
   @supports (width: min(1rem, 2rem)) {
-    grid-template-columns: repeat(auto-fill, minmax(min(var(--cell-min-size), 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--child-target-size), 100%), 1fr));
   }
 
   list-style: none;
