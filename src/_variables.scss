@@ -39,6 +39,7 @@ $border-width-sm: 0.0625rem;
 
   --gap-default: var(--space-md);
   --gap: var(--gap-default);
+  --gap-flow: var(--gap);
 
   --border-width-sm: #{$border-width-sm};
   --border-width-md: 0.125rem;

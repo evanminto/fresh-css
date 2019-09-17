@@ -46,8 +46,8 @@
   margin-bottom: calc(-1 * #{$gap});
 
   > * {
-    margin: 0;
     margin-bottom: $gap;
+    margin-top: 0;
   }
 }
 

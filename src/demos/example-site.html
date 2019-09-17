@@ -14,23 +14,25 @@
   }
 
   .hero__content {
-    --gap: 0;
+    --gap-flow: 0;
   }
 
   .hero__content .a-cta {
-    --gap-self: var(--space-lg);
+    --gap-flow-self: var(--space-md);
   }
 
   .titled-section {
-    --gap-self: var(--space-lg);
+    --gap-flow: var(--space-sm);
+    --gap-flow-self: var(--space-lg);
   }
 
-  .titled-section > * {
-    --gap-self: var(--space-sm);
-    --gap: var(--gap-default);
+  .value-prop {
+    --gap-flow: var(--space-sm);
   }
 
   .item-preview {
+    --gap-flow: var(--space-sm);
+
     background: #eee;
   }
 
@@ -40,12 +42,19 @@
 
   .item-preview .l-switcher {
     --sidebar-size: 15rem;
-    --gap-block: 0rem;
-    --gap-inline: 0rem;
+    --gap: 0;
   }
 
   .item-preview .l-frame {
     --aspect-ratio: 16/9;
+  }
+
+  .small-item {
+    padding-bottom: var(--space-sm);
+  }
+
+  .small-item > .l-stack {
+    --gap: var(--space-sm);
   }
 
   .small-item .l-frame {
@@ -95,7 +104,7 @@
         <div class="l-box">
           <ul class="l-switcher u-center">
             <li class="l-box">
-              <div class="l-center">
+              <div class="l-center value-prop">
                 <div>
                   <h2>One</h2>
                   <p>Lorem ipsum dolor sit amet.</p>
@@ -104,7 +113,7 @@
             </li>
 
             <li class="l-box">
-              <div class="l-center">
+              <div class="l-center value-prop">
                 <div>
                   <h2>Two</h2>
                   <p>Lorem ipsum dolor sit amet.</p>
@@ -113,7 +122,7 @@
             </li>
 
             <li class="l-box">
-              <div class="l-center">
+              <div class="l-center value-prop">
                 <div>
                   <h2>Three</h2>
                   <p>Lorem ipsum dolor sit amet.</p>
@@ -128,204 +137,202 @@
               <a href="">Show All</a>
             </div>
 
-            <div>
-              <ul class="l-reel">
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>One</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+            <ul class="l-reel">
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>One</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Two</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Two</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Three</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Three</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Four</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Four</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Five</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Five</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Six</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Six</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Seven</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Seven</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Eight</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Eight</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Nine</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Nine</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Ten</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Ten</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Eleven</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Eleven</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Twelve</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Twelve</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Thirteen</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Thirteen</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Fourteen</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Fourteen</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <div class="small-item">
-                    <div class="l-stack">
-                      <h3>Fifteen</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
+              <li>
+                <div class="small-item">
+                  <div class="l-stack">
+                    <h3>Fifteen</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
 
-                      <div class="l-frame u-reorder-first">
-                        <img src="//placehold.it/200x300">
-                      </div>
+                    <div class="l-frame u-reorder-first">
+                      <img src="//placehold.it/200x300">
                     </div>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
 
           <div class="titled-section">

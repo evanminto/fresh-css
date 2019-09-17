@@ -1,25 +1,14 @@
 * {
   box-sizing: border-box;
 
-  --gap-self-inherit: var(--gap);
-  --gap-block-self-inherit: var(--gap-block, var(--gap-self-inherit));
-  --gap-inline-self-inherit: var(--gap-inline, var(--gap-self-inherit));
+  --gap: var(--gap-default);
 
   --gap-inherit: var(--gap);
-  --gap-block-inherit: var(--gap-block, var(--gap-inherit));
-  --gap-inline-inherit: var(--gap-inline, var(--gap-inherit));
+  --gap-inherit-block: var(--gap-block, var(--gap-inherit));
+  --gap-inherit-inline: var(--gap-inline, var(--gap-inherit));
 
-  --gap-self: var(--gap);
-  --gap-block-self: var(--gap-block, var(--gap-self));
-  --gap-inline-self: var(--gap-inline, var(--gap-self));
-
-  --gap-computed-block: var(--gap-block-inherit, var(--gap-block, var(--gap)));
-  --gap-computed-inline: var(--gap-inline-inherit, var(--gap-inline, var(--gap)));
-  --gap-computed-block-self: var(--gap-block-self, var(--gap-self, var(--gap-block-self-inherit, var(--gap-self-inherit))));
-  --gap-computed-inline-self: var(--gap-inline-self, var(--gap-self, var(--gap-inline-self-inherit, var(--gap-self-inherit))));
-
-  grid-gap: var(--gap-computed-block) var(--gap-computed-inline);
-  gap: var(--gap-computed-block) var(--gap-computed-inline);
+  grid-gap: var(--gap-block, var(--gap)) var(--gap-inline, var(--gap));
+  gap: var(--gap-block, var(--gap)) var(--gap-inline, var(--gap));
   margin-top: 0;
   margin-bottom: 0;
 
@@ -39,7 +28,9 @@
 }
 
 * + * {
-  margin-top: var(--gap-computed-block-self);
+  --gap-flow-self: var(--gap-flow);
+
+  margin-top: var(--gap-flow-self);
 }
 
 *::before,
