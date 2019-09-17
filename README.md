@@ -7,8 +7,6 @@ Most of the layouts are based directly on the ones in [Heydon Pickering](https:/
 
 ### Box
 
-### Carousel
-
 ### Center
 
 ### Cluster
@@ -20,6 +18,8 @@ Most of the layouts are based directly on the ones in [Heydon Pickering](https:/
 ### Frame
 
 ### Grid
+
+### Reel
 
 ### Sidebar
 
@@ -35,11 +35,11 @@ Most of the layouts are based directly on the ones in [Heydon Pickering](https:/
 
 ## Utilities
 
-### center
+### .u-clear-list-style
 
-### clear-list-style
+### .u-reorder-first
 
-### reorder-first
+### .u-text-center
 
 ## Custom Properties
 
