@@ -1,0 +1,15 @@
+.a-cta {
+  background: #eee;
+  border: $border-width-sm solid;
+  color: black;
+  display: inline-block;
+  padding: $space-sm $space-md;
+  outline: $border-width-sm solid currentColor;
+  text-align: center;
+
+  @at-root a#{&}::after {
+    content: '›';
+    display: inline-block;
+    margin-left: 1ch;
+  }
+}

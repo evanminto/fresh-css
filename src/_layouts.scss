@@ -1,44 +1,175 @@
 .l-box {
   --gutter: var(--space-md);
+  --gutter-inherit: var(--gutter);
+  --clearfix: initial;
 
-  border: var(--border-width) solid currentColor;
-  padding: var(--gutter);
-  outline: var(--border-width-md) solid transparent;
-}
-
-.l-box--with-border {
-  border: var(--border-width) solid currentColor;
+  @include l-box(var(--gutter));
 }
 
 .l-box--stretch {
-  margin-inline-start: calc(-1 * var(--gutter));
-  margin-inline-end: calc(-1 * var(--gutter));
-  max-inline-size: calc(100% + 2 * var(--gutter));
-  inline-size: calc(100% + 2 * var(--gutter));
+  @include l-box--stretch(var(--gutter-inherit));
+}
+
+.l-center {
+  --max-size: var(--measure);
+
+  @include l-center(var(--max-size));
+}
+
+.l-cluster {
+  @include l-cluster(var(--gap-computed-inline), var(--gap-computed-block));
+}
+
+.l-cluster--spread {
+  @include l-cluster--spread;
+}
+
+.l-cluster--end {
+  @include l-cluster--end;
+}
+
+.l-cluster--center {
+  @include l-cluster--center;
+}
+
+.l-cover {
+  --gutter: var(--space-md);
+  --gutter-inherit: var(--gutter);
+  --min-size: 100vh;
+
+  @include l-cover(var(--min-size), var(--gutter), var(--gap-computed-block));
+}
+
+.l-cover--breakout {
+  @include l-cover--breakout;
+}
+
+.l-cover__main {
+  @include l-cover__main;
+}
+
+.l-float {
+  --breakpoint: var(--measure);
+  --direction: left;
+  --min-size: calc(25% + var(--measure) / 8);
+  --max-size: 100%;
+  --gap-inline-start: 0;
+  --gap-inline-end: 1;
+
+  @include l-float(
+    var(--direction),
+    var(--breakpoint),
+    var(--min-size),
+    var(--max-size),
+    none,
+    none
+  );
+
+  margin-bottom: var(--gap-computed-block);
+  margin-left: calc(var(--gap-inline-start) * var(--gap-computed-inline));
+  margin-right: calc(var(--gap-inline-end) * var(--gap-computed-inline));
+
+  // Remove default gap on subsequent element.
+  + * {
+    --gap-block-self: 0;
+  }
+}
+
+.l-float--end {
+  --direction: inline-end;
+  --gap-inline-start: 1;
+  --gap-inline-end: 0;
+}
+
+.l-frame {
+  @include l-frame(var(--aspect-ratio, 1/1));
+}
+
+.l-grid {
+  --child-target-size: 10rem;
+  --child-target-size-fallback: calc(10% + 6.5rem);
+
+  @include l-grid(var(--child-target-size), var(--child-target-size-fallback));
+}
+
+.l-reel {
+  @include l-reel(var(--gap-computed-inline));
+}
+
+.l-sidebar {
+  --min-size: 50%;
+
+  @include l-sidebar(
+    var(--breakpoint),
+    var(--min-size),
+    var(--gap-computed-inline),
+    var(--gap-computed-block),
+    var(--target-size, var(--child-target-size)),
+    '.l-sidebar__main'
+  );
+
+  > * {
+    @include n-exactly(1) {
+      --breakpoint: 100%;
+    }
+
+    @include n-exactly(2) {
+      --breakpoint: 100%;
+    }
+  }
+}
+
+.l-sidebar__main {
+  flex: 9999 1 calc((var(--breakpoint) - 100%) * 9999);
+  min-width: calc(var(--min-size) - var(--gap-computed-inline));
 }
 
 .l-stack {
-  display: flex;
-  flex-direction: column;
-  grid-gap: 0;
-  gap: 0;
-  margin-block-end: calc(-1 * var(--gap-block-self));
+  @include l-stack(var(--gap-computed-block));
 
   > * {
-    margin: 0;
-    margin-block-end: var(--gap-block-self);
+    --gap-inherit: inherit;
   }
 }
 
-.l-stack--split {
-  > :nth-last-child(2) {
-    margin-block-end: auto;
+.l-stack--compact {
+  --gap: 0;
+  --gap-self-inherit: inherit;
+
+  > * {
+    --gap: var(--gap-default);
   }
 }
 
-.l-stack--split-start {
+.l-stack__split-after {
+  @include l-stack__split-after;
+}
+
+.l-switcher {
+  @include l-switcher(var(--breakpoint), var(--gap-computed-inline), var(--gap-computed-block), var(--size, 1));
+}
+
+.l-switcher--70-30 {
   > :first-child {
-    margin-block-end: auto;
+    --size: 7;
+  }
+
+  > :last-child {
+    --size: 3;
+  }
+}
+
+.l-switcher--25-50-25 {
+  > :first-child {
+    --size: 25;
+  }
+
+  > :nth-child(2) {
+    --size: 50;
+  }
+
+  > :last-child {
+    --size: 25;
   }
 }
 
@@ -59,19 +190,7 @@
 
   --child-target-size: auto;
 
-  display: flex;
-  flex-wrap: wrap;
-  grid-gap: 0;
-  gap: 0;
-  margin-inline-start: calc(-1 * var(--gap-inline-self));
-  margin-block-end: calc(-1 * var(--gap-block-self));
-
   > * {
-    flex: 1 1 calc((var(--breakpoint) - 100%) * 9999);
-    margin: 0;
-    margin-inline-start: var(--gap-inline-self);
-    margin-block-end: var(--gap-block-self);
-
     @include n-exactly(2) {
       --breakpoint: var(--breakpoint-2);
     }
@@ -94,175 +213,6 @@
 
     @include n-or-more(7) {
       --breakpoint: var(--breakpoint-7-or-more);
-    }
-  }
-}
-
-.l-sidebar {
-  --min-size: 50%;
-
-  > * {
-    flex: 1 1 var(--target-size, var(--child-target-size));
-
-    @include n-exactly(1) {
-      --breakpoint: 100%;
-    }
-
-    @include n-exactly(2) {
-      --breakpoint: 100%;
-    }
-  }
-}
-
-.l-sidebar__main {
-  flex: 9999 1 calc((var(--breakpoint) - 100%) * 9999);
-  min-width: calc(var(--min-size) - var(--gap-inline-self));
-}
-
-.l-grid {
-  --child-target-size: 10rem;
-  --child-target-size-fallback: calc(10% + 6.5rem);
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--child-target-size-fallback), 1fr));
-
-  @supports (width: min(1rem, 2rem)) {
-    grid-template-columns: repeat(auto-fill, minmax(min(var(--child-target-size), 100%), 1fr));
-  }
-
-  list-style: none;
-  padding: 0;
-
-  > * {
-    @supports (display: grid) {
-      margin: 0;
-    }
-  }
-}
-
-.l-center {
-  --max-size: var(--measure);
-
-  display: flex;
-  flex-direction: column;
-
-  > * {
-    inline-size: 100%;
-    margin: auto;
-    max-inline-size: var(--max-size);
-  }
-}
-
-.l-cover {
-  --gutter: var(--space-md);
-  --min-size: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  grid-gap: 0;
-  gap: 0;
-  justify-content: space-between;
-  min-block-size: var(--min-size);
-  padding: var(--gutter);
-
-  > :first-child:not(.l-cover__main) {
-    margin: 0;
-    margin-block-end: var(--gap-block-self);
-  }
-
-  > :last-child:not(.l-cover__main) {
-    margin: 0;
-    margin-block-start: var(--gap-block-self);
-  }
-}
-
-.l-cover--breakout {
-  inline-size: 100vw;
-  position: relative;
-  inset-inline-start: 50%;
-  inset-inline-end: 50%;
-  margin-inline-start: -50vw;
-  margin-inline-end: -50vw;
-}
-
-.l-cover__main {
-  margin-block: auto;
-}
-
-.l-frame {
-  overflow: hidden;
-  padding-block-end: calc(100% / (var(--aspect-ratio, 1/1)));
-  position: relative;
-
-  > * {
-    position: absolute;
-    inset: 0 0 0 0;
-    block-size: 100%;
-    inline-size: 100%;
-  }
-}
-
-.l-cluster {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  grid-gap: 0;
-  gap: 0;
-  margin-inline-start: calc(-1 * var(--gap-inline-self));
-  margin-block-end: calc(-1 * var(--gap-block-self));
-
-  > * {
-    flex: 0 0 auto;
-    margin: 0;
-    margin-inline-start: var(--gap-inline-self);
-    margin-block-end: var(--gap-block-self);
-  }
-}
-
-.l-cluster--spread {
-  justify-content: space-between;
-}
-
-.l-cluster--end {
-  justify-content: flex-end;
-}
-
-.l-cluster--center {
-  justify-content: center;
-}
-
-.l-carousel {
-  display: flex;
-  grid-gap: 0;
-  gap: 0;
-  list-style: none;
-  max-inline-size: 100%;
-  overflow-inline: auto;
-  overflow-block: hidden;
-  position: relative;
-
-  &::before {
-    content: '';
-    // TODO
-  }
-
-  &::after {
-    content: '';
-    inset-inline-end: 0;
-    position: sticky;
-    block-size: 100%;
-    background: green;
-    inline-size: 1rem;
-    display: block;
-    flex: 0 0 1rem;
-  }
-
-  > * {
-    flex: 0 0 auto;
-
-    + * {
-      margin-block-start: 0;
-      margin-inline-start: var(--gap-inline-self, var(--gap-inline));
     }
   }
 }

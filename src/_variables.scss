@@ -3,6 +3,16 @@ $measure: 85ch;
 $type-scale: 1.5;
 $space-scale: 2;
 
+$space-md: $line-height * 1rem;
+$space-sm: $space-md / 2;
+$space-lg: $space-md * 2;
+
+$space-md-relative: $line-height * 1em;
+$space-sm-relative: $space-md-relative / 2;
+$space-lg-relative: $space-md-relative * 2;
+
+$border-width-sm: 0.0625rem;
+
 :root {
   --line-height: #{$line-height};
   --measure: #{$measure};
@@ -29,12 +39,8 @@ $space-scale: 2;
 
   --gap-default: var(--space-md);
   --gap: var(--gap-default);
-  --gap-block: var(--gap);
-  --gap-block-default: var(--gap-default);
-  --gap-inline: var(--gap);
-  --gap-inline-default: var(--gap-default);
 
-  --border-width-sm: 0.0625rem;
+  --border-width-sm: #{$border-width-sm};
   --border-width-md: 0.125rem;
   --border-width-lg: 0.1875rem;
 }

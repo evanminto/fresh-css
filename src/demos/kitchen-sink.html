@@ -23,18 +23,30 @@
   }
 
   .demo-frame {
-    min-block-size: 50vh;
+    min-height: 50vh;
   }
 
   .demo-page {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 160ch;
     padding: var(--space-md);
+  }
+
+  .demo-bg {
+    background: #eee;
+  }
+
+  .demo-bg-dark {
+    background: black;
+    color: white;
   }
 </style>
 
 <div class="demo-page">
   <h1>Fresh.css Kitchen Sink</h1>
 
-  <h2>Paragraph</h2>
+  <h2>Atom: Paragraph</h2>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -42,7 +54,16 @@
     Etiam scelerisque semper justo, nec dignissim metus luctus sed.
   </p>
 
-  <h2>Responsive Table</h2>
+  <h2>Atom: Button</h2>
+
+  <button>Click me</button>
+
+  <h2>Atom: CTA</h2>
+
+  <a href="" class="a-cta">Link</a>
+  <button class="a-cta">Button</button>
+
+  <h2>Molecule: Responsive Table</h2>
 
   <table class="m-responsive-table">
     <thead>
@@ -108,42 +129,6 @@
     </tfoot>
   </table>
 
-  <h2>Layout: Box</h2>
-
-  <h3>Default</h3>
-
-  <div class="l-box">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
-      Etiam scelerisque semper justo, nec dignissim metus luctus sed.
-    </p>
-  </div>
-
-  <h3>With Border</h3>
-
-  <div class="l-box l-box--with-border">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
-      Etiam scelerisque semper justo, nec dignissim metus luctus sed.
-    </p>
-  </div>
-
-  <h3>With Nested Stretch</h3>
-
-  <div class="l-box l-box--with-border">
-    <p>
-      Before
-    </p>
-
-    <div class="l-box l-box--stretch" style="background: black; color: white;">Middle</div>
-
-    <p>
-      After
-    </p>
-  </div>
-
   <h2>Layout: Stack</h2>
 
   <h3>Default</h3>
@@ -154,20 +139,96 @@
     <div class="demo-block">3</div>
   </div>
 
-  <h3>Split</h3>
+  <h3>Compact</h3>
 
-  <div class="l-stack l-stack--split demo-frame">
+  <div class="l-stack l-stack--compact">
     <div class="demo-block">1</div>
     <div class="demo-block">2</div>
     <div class="demo-block">3</div>
   </div>
 
-  <h3>Split (Start)</h3>
+  <h3>Split</h3>
 
-  <div class="l-stack l-stack--split-start demo-frame">
+  <div class="l-stack l-stack--split demo-frame">
     <div class="demo-block">1</div>
-    <div class="demo-block">2</div>
+    <div class="demo-block l-stack__split-after">2</div>
     <div class="demo-block">3</div>
+  </div>
+
+  <h2>Layout: Box</h2>
+
+  <h3>Default</h3>
+
+  <div class="l-box demo-bg">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
+      Etiam scelerisque semper justo, nec dignissim metus luctus sed.
+    </p>
+  </div>
+
+  <h3>With Nested Stretch</h3>
+
+  <div class="l-box demo-bg">
+    <p>
+      Before
+    </p>
+
+    <div class="l-box l-box--stretch demo-bg-dark">Middle</div>
+
+    <p>
+      After
+    </p>
+  </div>
+
+  <h2>Layout: Center</h2>
+
+  <div class="l-center">
+    <div class="demo-block">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
+        Etiam scelerisque semper justo, nec dignissim metus luctus sed.
+      </p>
+    </div>
+  </div>
+
+  <h2>Layout: Float</h2>
+
+  <h3>Default (Start)</h3>
+
+  <div style="--clearfix: initial;">
+    <img src="//placehold.it/300x300" class="l-float">
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet lacus vel sem vehicula auctor. Proin a felis malesuada, sagittis dolor eget, dignissim orci. Nunc fringilla ligula eget neque posuere ultrices. Cras id ante orci. Proin sed magna lacinia, placerat eros eu, efficitur urna. Proin tristique, nisl in commodo bibendum, augue enim bibendum erat, et imperdiet enim urna at massa. Integer mattis efficitur dapibus.
+    </p>
+
+    <p>
+      Nam eleifend molestie vehicula. Sed ac commodo ipsum, vel malesuada ante. Quisque semper ac purus sit amet imperdiet. Maecenas facilisis in libero eu rutrum. Proin ac nunc vestibulum, volutpat nisl sit amet, elementum eros. Cras vitae mi non lorem maximus fermentum. Quisque vel arcu quis ipsum lacinia pellentesque ac nec lacus. Suspendisse eu tempor ligula. Proin ipsum quam, fringilla non dignissim condimentum, vestibulum eu lorem. Cras eget quam ut felis porta tincidunt in et justo. In ante nunc, posuere nec fringilla non, scelerisque in eros. Sed dapibus purus non lectus auctor sagittis. Donec rutrum finibus dui quis interdum. Vivamus dictum nunc eu nulla elementum, vitae pulvinar ipsum iaculis. Etiam luctus posuere varius. Mauris vehicula orci faucibus condimentum iaculis.
+    </p>
+
+    <p>
+      Ut quis facilisis augue. Phasellus sed blandit nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc pellentesque lacus ac lorem tempor, sit amet suscipit eros mattis. Curabitur malesuada suscipit ligula. Sed purus ante, congue in nisl quis, vestibulum porta diam. Donec erat orci, congue quis elit quis, auctor finibus lorem. Nam sodales tellus sed velit facilisis iaculis. Nullam quis gravida tortor. Sed elementum suscipit mollis. Aenean sit amet congue nisl. Duis nisi massa, porttitor quis dolor quis, semper feugiat eros. Aliquam at velit fermentum dui pulvinar gravida. Nullam nec justo nibh. Etiam gravida aliquam facilisis. Quisque aliquam sollicitudin ante, vel consequat ante rhoncus sed.
+    </p>
+  </div>
+
+  <h3>End</h3>
+
+  <div style="--clearfix: initial;">
+    <img src="//placehold.it/300x300" class="l-float l-float--end">
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet lacus vel sem vehicula auctor. Proin a felis malesuada, sagittis dolor eget, dignissim orci. Nunc fringilla ligula eget neque posuere ultrices. Cras id ante orci. Proin sed magna lacinia, placerat eros eu, efficitur urna. Proin tristique, nisl in commodo bibendum, augue enim bibendum erat, et imperdiet enim urna at massa. Integer mattis efficitur dapibus.
+    </p>
+
+    <p>
+      Nam eleifend molestie vehicula. Sed ac commodo ipsum, vel malesuada ante. Quisque semper ac purus sit amet imperdiet. Maecenas facilisis in libero eu rutrum. Proin ac nunc vestibulum, volutpat nisl sit amet, elementum eros. Cras vitae mi non lorem maximus fermentum. Quisque vel arcu quis ipsum lacinia pellentesque ac nec lacus. Suspendisse eu tempor ligula. Proin ipsum quam, fringilla non dignissim condimentum, vestibulum eu lorem. Cras eget quam ut felis porta tincidunt in et justo. In ante nunc, posuere nec fringilla non, scelerisque in eros. Sed dapibus purus non lectus auctor sagittis. Donec rutrum finibus dui quis interdum. Vivamus dictum nunc eu nulla elementum, vitae pulvinar ipsum iaculis. Etiam luctus posuere varius. Mauris vehicula orci faucibus condimentum iaculis.
+    </p>
+
+    <p>
+      Ut quis facilisis augue. Phasellus sed blandit nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc pellentesque lacus ac lorem tempor, sit amet suscipit eros mattis. Curabitur malesuada suscipit ligula. Sed purus ante, congue in nisl quis, vestibulum porta diam. Donec erat orci, congue quis elit quis, auctor finibus lorem. Nam sodales tellus sed velit facilisis iaculis. Nullam quis gravida tortor. Sed elementum suscipit mollis. Aenean sit amet congue nisl. Duis nisi massa, porttitor quis dolor quis, semper feugiat eros. Aliquam at velit fermentum dui pulvinar gravida. Nullam nec justo nibh. Etiam gravida aliquam facilisis. Quisque aliquam sollicitudin ante, vel consequat ante rhoncus sed.
+    </p>
   </div>
 
   <h2>Layout: Switcher</h2>
@@ -185,9 +246,24 @@
     <div class="demo-block">2</div>
   </div>
 
+  <h3>Two Items (70/30)</h3>
+
+  <div class="l-switcher l-switcher--70-30">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+  </div>
+
   <h3>Three Items</h3>
 
   <div class="l-switcher">
+    <div class="demo-block">1</div>
+    <div class="demo-block">2</div>
+    <div class="demo-block">3</div>
+  </div>
+
+  <h3>Three Items (25-50-25)</h3>
+
+  <div class="l-switcher l-switcher--25-50-25">
     <div class="demo-block">1</div>
     <div class="demo-block">2</div>
     <div class="demo-block">3</div>
@@ -377,9 +453,9 @@
     <div class="demo-block">20</div>
   </div>
 
-  <h2>Layout: Carousel</h2>
+  <h2>Layout: Reel</h2>
 
-  <div class="l-carousel">
+  <div class="l-reel">
     <div class="demo-block">1</div>
     <div class="demo-block">2</div>
     <div class="demo-block">3</div>
@@ -402,23 +478,11 @@
     <div class="demo-block">20</div>
   </div>
 
-  <h2>Layout: Center</h2>
-
-  <div class="l-center">
-    <div class="demo-block">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        ut lectus eget felis condimentum volutpat. Aenean eget quam massa.
-        Etiam scelerisque semper justo, nec dignissim metus luctus sed.
-      </p>
-    </div>
-  </div>
-
   <h2>Layout: Cover</h2>
 
   <h3>Main Only</h3>
 
-  <div class="l-cover">
+  <div class="l-cover demo-bg">
     <div class="demo-block l-cover__main">
       <p>
         Main
@@ -428,7 +492,7 @@
 
   <h3>Header and Main</h3>
 
-  <div class="l-cover">
+  <div class="l-cover demo-bg">
     <div class="demo-block">
       <p>
         Header
@@ -444,7 +508,7 @@
 
   <h3>Main and Footer</h3>
 
-  <div class="l-cover">
+  <div class="l-cover demo-bg">
     <div class="demo-block l-cover__main">
       <p>
         Main
@@ -460,7 +524,29 @@
 
   <h3>All Three</h3>
 
-  <div class="l-cover">
+  <div class="l-cover demo-bg">
+    <div class="demo-block">
+      <p>
+        Header
+      </p>
+    </div>
+
+    <div class="demo-block l-cover__main">
+      <p>
+        Main
+      </p>
+    </div>
+
+    <div class="demo-block">
+      <p>
+        Footer
+      </p>
+    </div>
+  </div>
+
+  <h3>All Three, Breakout</h3>
+
+  <div class="l-cover l-cover--breakout demo-bg">
     <div class="demo-block">
       <p>
         Header

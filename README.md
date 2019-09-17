@@ -81,12 +81,40 @@ Overrides the inherited `--gap-block` value for a single element without affecti
 
 Overrides the inherited `--gap-inline` value for a single element without affecting its children.
 
+### --gap-self-inherit
+**Unit:** `inherit`
+
+**Supported in:** Carousel, Cluster, Cover, Grid, Sidebar, Stack, Switcher
+
+When set to the `inherit` keyword, sets the element's own gap to inherit from its parent. Without this property, when you set the gap on an element it will affect both its children and the container itself.
+
+### --gap-block-self-inherit
+**Unit:** `inherit`
+
+**Supported in:** Carousel, Cluster, Cover, Grid, Sidebar, Stack, Switcher
+
+Block-only `---gap-self-inherit`.
+
+### --gap-inline-self-inherit
+**Unit:** `inherit`
+
+**Supported in:** Carousel, Cluster, Cover, Grid, Sidebar, Stack, Switcher
+
+Inline-only `---gap-self-inherit`.
+
 ### --gutter
 **Unit:** `<length>`
 
 **Supported in:** Box, Cover
 
 Consistent padding along the edges of an element.
+
+### --gutter-inherit
+**Unit:** `<length>`
+
+**Supported in:** Box
+
+When set to the `inherit` keyword, this property takes on the nearest ancestor gutter value. The "Stretch" variant of the Box layout uses this to break out of the gutter of its parent while still maintaining its own independent gutter value.
 
 ### --breakpoint-base
 **Unit:** `<length>`

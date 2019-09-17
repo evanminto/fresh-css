@@ -1,17 +1,53 @@
 * {
+  box-sizing: border-box;
+
+  --gap-self-inherit: var(--gap);
+  --gap-block-self-inherit: var(--gap-block, var(--gap-self-inherit));
+  --gap-inline-self-inherit: var(--gap-inline, var(--gap-self-inherit));
+
+  --gap-inherit: var(--gap);
+  --gap-block-inherit: var(--gap-block, var(--gap-inherit));
+  --gap-inline-inherit: var(--gap-inline, var(--gap-inherit));
+
   --gap-self: var(--gap);
   --gap-block-self: var(--gap-block, var(--gap-self));
   --gap-inline-self: var(--gap-inline, var(--gap-self));
 
+  --gap-computed-block: var(--gap-block-inherit, var(--gap-block, var(--gap)));
+  --gap-computed-inline: var(--gap-inline-inherit, var(--gap-inline, var(--gap)));
+  --gap-computed-block-self: var(--gap-block-self, var(--gap-self, var(--gap-block-self-inherit, var(--gap-self-inherit))));
+  --gap-computed-inline-self: var(--gap-inline-self, var(--gap-self, var(--gap-inline-self-inherit, var(--gap-self-inherit))));
+
+  grid-gap: var(--gap-computed-block) var(--gap-computed-inline);
+  gap: var(--gap-computed-block) var(--gap-computed-inline);
+  margin-top: 0;
+  margin-bottom: 0;
+
   box-shadow: var(--box-shadow);
-  box-sizing: border-box;
-  margin-block-start: 0;
-  margin-block-end: 0;
   max-width: var(--measure);
+
+  --visually-hidden: _;
+
+  position: var(--visually-hidden, absolute);
+  height: var(--visually-hidden, 1px);
+  width: var(--visually-hidden, 1px);
+  overflow: var(--visually-hidden, hidden);
+  clip: var(--visually-hidden, rect(1px 1px 1px 1px)); /* IE6, IE7 */
+  clip: var(--visually-hidden, rect(1px, 1px, 1px, 1px));
+
+  --clearfix: _;
 }
 
 * + * {
-  margin-block-start: var(--gap-block-self);
-  gap: var(--gap-block) var(--gap-inline);
-  grid-gap: var(--gap-block) var(--gap-inline);
+  margin-top: var(--gap-computed-block-self);
+}
+
+*::before,
+*::after {
+  content: var(--clearfix, " "); /* 1 */
+  display: var(--clearfix, table); /* 2 */
+}
+
+*::after {
+  clear: var(--clearfix, both);
 }
