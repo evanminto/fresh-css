@@ -50,3 +50,9 @@ button {
   box-shadow: 0 0 0 var(--border-width-lg) black, var(--box-shadow, 0 0 0 transparent);
   outline: none;
 }
+
+ol[class],
+ul[class] {
+  list-style: none;
+  padding-left: 0;
+}
